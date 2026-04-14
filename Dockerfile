@@ -1,6 +1,7 @@
 FROM python:3.12-slim
 WORKDIR /app
 COPY index.html .
+COPY logo.png .
 RUN pip install --no-cache-dir flask gunicorn
 COPY server.py .
 ENV PORT=8080
