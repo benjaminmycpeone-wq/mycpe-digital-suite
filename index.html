@@ -24,7 +24,7 @@
     .header p { font-size: 16px; color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(2, minmax(320px, 1fr));
       gap: 24px;
       max-width: 1100px;
       width: 100%;
@@ -76,10 +76,12 @@
     }
     .card:hover .arrow { color: rgba(255,255,255,0.6); transform: translateX(4px); }
     .footer { margin-top: 60px; color: rgba(255,255,255,0.25); font-size: 12px; }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 700px) {
       body { padding: 40px 16px 32px; }
       .header h1 { font-size: 28px; }
-      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -130,7 +132,7 @@
     <a class="card" data-color="orange" href="https://dms.my-cpe.com/web-automation/">
       <div class="card-icon">&#x1F916;</div>
       <span class="arrow">&rarr;</span>
-      <h2>Web Automation</h2>
+      <h2>Web Automation v2</h2>
       <p class="desc">Automate repetitive web workflows for your team with a streamlined browser-based automation experience.</p>
       <div class="tags">
         <span class="tag">Web Workflows</span>
